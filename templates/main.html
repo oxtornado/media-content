@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Recomendations</title>
+</head>
+<body>
+    <h1>Media Content</h1>
+    <ul>
+        {% for content in media_content %}
+            <li>
+                <a href="{{ content.link }}" alt="Mythrill" target="_blank">
+                    <div class="card">
+                      <div class="wrapper">
+                        <img src="{{ content.poster }}" />
+                      </div>
+                      <img src="{{ content.title_image }}" class="title" />
+                      <img src="{{ content.transition_image }}" class="character" />
+                    </div>
+                  </a>
+            </li>
+        {% endfor %}
+        </ul>
+</body>
+</html>
